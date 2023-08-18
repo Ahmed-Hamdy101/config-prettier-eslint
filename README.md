@@ -64,7 +64,7 @@
          }
        ```
 
-### 🔝 Update scripts section in package json
+## 4 🔝 Update scripts section in package json
 
 ```json
 "scripts":{
