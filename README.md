@@ -6,13 +6,12 @@
 
 ## 1 - 🎨 installation Nodejs
 
-- windows
+1.1 - windows
 
   - install <a href="https://nodejs.org/en" />Nodejs</a>
   - choose LTS Version
     (Long Term Support)
-- macos
-or linux
+1.2 - mac or linux
 
   - ```bash
         brew update && brew upgrade node
