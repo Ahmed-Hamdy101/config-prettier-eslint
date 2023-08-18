@@ -77,7 +77,7 @@ $ npm i prettier
 },
 ```
 
-## Installation eslint and prettier
+## 🎂 Installation eslint and prettier
 
 ```ps
 npm i --save-dev eslint @typescript-eslint/parser typescript \
