@@ -74,7 +74,7 @@
 - 3.4 ⚡ Update scripts section in `package.json`
 
   - ```json
-        //update format script
+        # update format script
         "scripts":{
        "prettier":"prettier --write test \"*.js\" --check"
         },
@@ -93,7 +93,7 @@
 
 ## 5 🚀 Create eslint file be sure `eslint installed`
 
-- `automatic` : file will generated
+- 5.0 `automatic` : file will generated
 
   - run this in your terminal
 
@@ -107,7 +107,7 @@
           eslint --init
        ```
 
-- `manually`: follow these steps and u will create the file and config
+- 5.1 `manually`: follow these steps and u will create the file and config
   - run this in your terminal
 
     - ```shell
@@ -140,8 +140,11 @@
         " > .eslintrc.cjs
        ```
 
-  - 
-
-    - ```ps
-          eslint --init
-      ```
+- 5.3 🔥Fixer automatic add this in your package.json be sure you descripe the folder of your project and replaced with **test**
+  - ```json
+        "lint": "eslint . --ext .js",
+        "lint:fix": "npm run lint -- --fix",
+        "prettier:fix": "npm run prettier -- --write",
+        "format": "npm run prettier:fix && npm run lint:fix"
+     ```
+  
