@@ -74,10 +74,11 @@
 - 3.4 ⚡ Update scripts section in `package.json`
 
   - ```json
+        //update format script
         "scripts":{
-        "format":"prettier --write \"src/**/*.{ts,tsx}\""//update format script
+        "format":"prettier --write \"src/**/*.{ts,tsx}\""
         },
-        ```
+     ```
 
 ## 4 🔥 Installation config for eslint with prettier
 
