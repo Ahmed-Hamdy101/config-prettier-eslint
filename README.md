@@ -9,8 +9,8 @@
 1.1 - windows
 
   - install <a href="https://nodejs.org/en" />Nodejs</a>
-  - choose LTS Version
-    (Long Term Support)
+  - choose LTS Version (Long Term Support)
+    
 1.2 - mac or linux
 
   - ```bash
