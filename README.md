@@ -39,23 +39,23 @@
        $ npm i prettier
        ```
 
-3.2 - 🌴Create `.prettierrc`
-   - on linux or mac
-     - ```bash
-           touch .prettierrc
-       ```
-   - on windows or create new file and name it `.prettierrc` or from `cmd`
-   
-      - ```cmd
-        echo  "" > .prettierrc
-        ```
-   - to test prettier open `terminal/cmd` were `package.json` is
-   
-      - ```cmd
-        npm run prettier
-        ```
+    - 3.2 🌴Create `.prettierrc`
+      - on linux or mac
+        - ```bash
+              touch .prettierrc
+          ```
+      - on windows or create new file and name it `.prettierrc` or from `cmd`
+      
+         - ```cmd
+           echo  "" > .prettierrc
+           ```
+      - to test prettier open `terminal/cmd` were `package.json` is
+      
+         - ```cmd
+           npm run prettier
+           ```
 
-### 3 - 🔥 Add config of your .prettierrc file
+### 4 🔥 Add config of your .prettierrc file
 
 ```json
 {
