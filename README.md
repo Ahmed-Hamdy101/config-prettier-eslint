@@ -31,29 +31,29 @@
 
 ## 3 🐱‍🚀 Prettier step by step
 
-#### .2 - 📦 Install prettier
+  - 3.1 📦 Install prettier
 
-```bash
-$ yarn add prettier
-# or with npm
-$ npm i prettier
-```
+     - ```bash
+       $ yarn add prettier
+       # or with npm
+       $ npm i prettier
+       ```
 
-### 2 - 🌴Create `.prettierrc`
-- on linux or mac
-  - ```bash
-        touch .prettierrc
-    ```
-- on windows or create new file and name it `.prettierrc` or from `cmd`
-
-   - ```cmd
-     echo  "" > .prettierrc
-     ```
-- to test prettier open `terminal/cmd` were `package.json` is
-
-   - ```cmd
-     npm run prettier
-     ```
+3.2 - 🌴Create `.prettierrc`
+   - on linux or mac
+     - ```bash
+           touch .prettierrc
+       ```
+   - on windows or create new file and name it `.prettierrc` or from `cmd`
+   
+      - ```cmd
+        echo  "" > .prettierrc
+        ```
+   - to test prettier open `terminal/cmd` were `package.json` is
+   
+      - ```cmd
+        npm run prettier
+        ```
 
 ### 3 - 🔥 Add config of your .prettierrc file
 
