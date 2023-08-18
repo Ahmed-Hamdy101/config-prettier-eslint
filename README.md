@@ -57,12 +57,12 @@
 
    - Add this config of your .prettierrc file
    
-     -```json
+     - ```json
          {
          "printWidth":80 ,
          "tabWidth":2 ,"useTabs":false,"semi":true,"singleQuote": true
          }
-     ```
+       ```
 
 ### 🔝 Update scripts section in package json
 
