@@ -76,7 +76,7 @@
   - ```json
         //update format script
         "scripts":{
-        "format":"prettier --write \"src/**/*.{ts,tsx}\""
+       "prettier":"prettier --write test \"*.js\" --check"
         },
      ```
 
