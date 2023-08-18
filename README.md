@@ -4,7 +4,7 @@
 <h1> Eslint and Prettier Step by Step </h1>
 </div>
 
-## 1 - 🎨 installation Nodejs
+## 1  🎨 installation Nodejs
 
    - 1.1 windows
         - install <a href="https://nodejs.org/en" />Nodejs</a>
@@ -18,7 +18,7 @@
            sudo apt-get update && upgrade node
         ```
 
-## 2 - 🎇 how to initial npm package
+## 2  🎇 how to initial npm package
   - 2.1  create folder project eslint-prettier step by step
 
 - 2.2  init npm package in this directory with the following command
@@ -29,7 +29,7 @@
           $yarn init — yes
       ```
 
-## 🐱‍🚀 Prettier step by step
+## 3 🐱‍🚀 Prettier step by step
 
 #### .2 - 📦 Install prettier
 
