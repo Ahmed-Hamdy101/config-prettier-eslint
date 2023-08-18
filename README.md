@@ -21,13 +21,13 @@
 ## 2  🎇 how to initial npm package
   - 2.1  create folder project eslint-prettier step by step
 
-- 2.2  init npm package in this directory with the following command
-  
-    - ```bash
-          $npm init --yes
-          #  or 
-          $yarn init — yes
-      ```
+   - 2.2  init npm package in this directory with the following command
+     
+       - ```bash
+             $npm init --yes
+             #  or 
+             $yarn init — yes
+         ```
 
 ## 3 🐱‍🚀 Prettier step by step
 
