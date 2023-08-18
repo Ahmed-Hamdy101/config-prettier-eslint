@@ -82,7 +82,7 @@
 
 ## 4 🔥 Installation config for eslint with prettier
 
-- run this in your terminal
+- 4.1 🚅 run this in your terminal
 
   - ```ps
       npm i --save-dev eslint @typescript-eslint/parser typescript \
@@ -140,7 +140,7 @@
         " > .eslintrc.cjs
        ```
 
-  - if  <code> eslint </code> installed `global` run this it will ask u some question
+  - 
 
     - ```ps
           eslint --init
