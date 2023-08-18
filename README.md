@@ -75,7 +75,7 @@
         },
         ```
 
-## 4 🔥 Installation config eslint with prettier
+## 4 🔥 Installation config for eslint with prettier
 - run this in your terminal
 
   -  ```ps
