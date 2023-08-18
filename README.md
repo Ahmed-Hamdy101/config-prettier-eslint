@@ -107,11 +107,37 @@
           eslint --init
        ```
 
-- `manually` : you will create the file and config
+- `manually`: follow these steps and u will create the file and config
   - run this in your terminal
 
     - ```shell
-          npx eslint init
+          echo " module.exports = {
+          env: {
+            browser: true,
+            es2021: true,
+          },
+          extends: ['airbnb-base', 'prettier'],
+          plugins: ['prettier'],
+          overrides: [
+            {
+              env: {
+                node: true,
+              },
+              files: ['.eslintrc.{js,cjs}'],
+              parserOptions: {
+                sourceType: 'script',
+              },
+            },
+          ],
+          parserOptions: {
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+          },
+          rules: {
+            'prettier/prettier': ['error'],
+          },
+        }
+        " > .eslintrc.cjs
        ```
 
   - if  <code> eslint </code> installed `global` run this it will ask u some question
