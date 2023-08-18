@@ -143,10 +143,33 @@
 ## 6 🔥Fixer automatically
 
   - 6.1 ⚡ add this in your package.json be sure you describe the folder of your project and replaced it with **test**
-        - ```json
+    
+    - ```json
               "lint": "eslint . --ext .js",
               "lint:fix": "npm run lint -- --fix",
               "prettier:fix": "npm run prettier -- --write",
               "format": "npm run prettier:fix && npm run lint:fix"
-           ```
+      ```
+## 7 ✔ Let's Run this magic
+  - 7.1 run this in your terminal
+    ```bash
+        npm run format
+      ```
+ - 7.2 output
+    - ```bash
+      > test@1.0.0 format
+      > npm run prettier:fix && npm run lint:fix
+      
+      
+      > test@1.0.0 prettier:fix
+      > npm run prettier -- --write
+      
+      
+      > test@1.0.0 prettier
+      > prettier --write test "*.js" --check --write
+      
+      Checking formatting...
+      All matched files use Prettier code style!
+      ```
+
   
