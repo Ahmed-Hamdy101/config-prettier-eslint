@@ -6,32 +6,28 @@
 
 ## 1 - 🎨 installation Nodejs
 
-1.1 - windows
-
-  - install <a href="https://nodejs.org/en" />Nodejs</a>
-  - choose LTS Version (Long Term Support)
+   - 1.1 windows
+        - install <a href="https://nodejs.org/en" />Nodejs</a>
+        - choose LTS Version (Long Term Support)
     
-1.2 - mac or linux
+ - 1.2 mac or linux
 
-  - ```bash
-        brew update && brew upgrade node
-        # or linux
-        sudo apt-get update && upgrade node
-    ```
+    -  ```bash
+           brew update && brew upgrade node
+           # or linux
+           sudo apt-get update && upgrade node
+        ```
 
 ## 2 - 🎇 how to initial npm package
+  - 2.1  create folder project eslint-prettier step by step
 
-- create folder project eslint-prettier step by step
-
-- init npm
-package in this directory
-with the following command:
-
-   - ```bash
-     $npm init --yes
-     #  or 
-     $yarn init — yes
-     ```
+- 2.2  init npm package in this directory with the following command
+  
+    - ```bash
+          $npm init --yes
+          #  or 
+          $yarn init — yes
+      ```
 
 ## 🐱‍🚀 Prettier step by step
 
