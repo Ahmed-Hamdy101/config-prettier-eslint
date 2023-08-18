@@ -99,23 +99,23 @@
 
     - ```shell
           npx eslint init
-          ```
+        ```
 
-  - if  `eslint` installed `global` run this it will ask u some question
+  - if  $eslint` installed `global` run this it will ask u some question
 
     - ```ps
           eslint --init
-          ```
+       ```
 
 - `manually` : you will create the file and config
   - run this in your terminal
 
     - ```shell
           npx eslint init
-          ```
+       ```
 
-  - if  `eslint` installed `global` run this it will ask u some question
+  - if  <code> eslint </code> installed `global` run this it will ask u some question
 
     - ```ps
           eslint --init
-          ```
+      ```
