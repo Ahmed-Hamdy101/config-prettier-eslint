@@ -111,7 +111,7 @@
   - run this in your terminal
 
     - ```shell
-          echo " module.exports = {
+      echo " module.exports = {
           env: {
             browser: true,
             es2021: true,
