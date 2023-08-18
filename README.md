@@ -55,24 +55,27 @@
         npm run prettier
         ```
 
-   - Add this config of your .prettierrc file
+ - 3.3 🚑 Add this config of your `.prettierrc` file
    
      - ```json
          {
          "printWidth":80 ,
-         "tabWidth":2 ,"useTabs":false,"semi":true,"singleQuote": true
+         "tabWidth":2 ,
+         "useTabs":false,
+         "semi":true,
+         "singleQuote": true
          }
        ```
 
-- 3.3 ⚡ Update scripts section in package json
+- 3.4 ⚡ Update scripts section in `package.json`
 
     - ```json
-      "scripts":{
-      "format":"prettier --write \"src/**/*.{ts,tsx}\""//update format script
-      },
-      ```
+        "scripts":{
+        "format":"prettier --write \"src/**/*.{ts,tsx}\""//update format script
+        },
+        ```
 
-## 🎂 Installation config eslint and prettier
+## 4 🎂 Installation config eslint and prettier
 
 ```ps
 npm i --save-dev eslint @typescript-eslint/parser typescript \
