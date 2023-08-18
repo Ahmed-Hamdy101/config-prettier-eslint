@@ -16,6 +16,8 @@ or linux
 
   - ```bash
         brew update && brew upgrade node
+        # or linux
+        sudo apt-get update && upgrade node
     ```
 
 ## 2 - 🎇 how to initial npm package
