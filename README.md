@@ -75,14 +75,15 @@
         },
         ```
 
-## 4 🎂 Installation config eslint and prettier
+## 4 🔥 Installation config eslint with prettier
+- run this in your terminal
 
-```ps
-npm i --save-dev eslint @typescript-eslint/parser typescript \
-eslint-config-prettier eslint-plugin-import eslint-plugin-node \
-eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y \
-eslint-plugin-standard prettier
-```
+  -  ```ps
+      npm i --save-dev eslint @typescript-eslint/parser typescript \
+      eslint-config-prettier eslint-plugin-import eslint-plugin-node \
+      eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y \
+      eslint-plugin-standard prettier
+      ```
 
 ## Create .eslintrc file in root directory of project with the following content
 
