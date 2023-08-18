@@ -140,11 +140,13 @@
         " > .eslintrc.cjs
        ```
 
-- 5.3 🔥Fixer automatic add this in your package.json be sure you descripe the folder of your project and replaced with **test**
-  - ```json
-        "lint": "eslint . --ext .js",
-        "lint:fix": "npm run lint -- --fix",
-        "prettier:fix": "npm run prettier -- --write",
-        "format": "npm run prettier:fix && npm run lint:fix"
-     ```
+## 6 🔥Fixer automatically
+
+  - 6.1 ⚡ add this in your package.json be sure you describe the folder of your project and replaced it with **test**
+        - ```json
+              "lint": "eslint . --ext .js",
+              "lint:fix": "npm run lint -- --fix",
+              "prettier:fix": "npm run prettier -- --write",
+              "format": "npm run prettier:fix && npm run lint:fix"
+           ```
   
