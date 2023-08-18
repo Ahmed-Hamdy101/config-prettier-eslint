@@ -89,16 +89,3 @@ fs.readFile(path.basename('./'), () => {
     log('fs = > setTime2: 4st  1s')
   }, 1)
 })
-
-// utility lib
-/**
- * how to install eslint
- * how to config eslint with prettier
- * how to config plugins
- */
-
-/** finished **
- * how to install prettier
- *
- *
- */
