@@ -13,10 +13,10 @@
 - 1.2 mac or linux
 
   - ```bash
-           brew update && brew upgrade node
-           # or linux
-           sudo apt-get update && upgrade node
-        ```
+       brew update && brew upgrade node
+       # or linux
+       sudo apt-get update && upgrade node
+     ```
 
 ## 2  🎇 how to initial npm package
 
@@ -25,10 +25,10 @@
 - 2.2  init npm package in this directory with the following command
 
   - ```bash
-             $npm init --yes
-             #  or 
-             $yarn init — yes
-         ```
+       $npm init --yes
+       #  or 
+       $yarn init — yes
+    ```
 
 ## 3 🐱‍🚀 Prettier & config step by step
 
@@ -44,7 +44,7 @@
   - on linux or mac
 
     - ```bash
-           touch .prettierrc
+         touch .prettierrc
        ```
 
   - on windows or create new file and name it `.prettierrc` or from `cmd`
@@ -69,12 +69,11 @@
          "semi":true,
          "singleQuote": true
          }
-       ```
+     ```
 
 - 3.4 ⚡ Update scripts section in `package.json`
 
   - ```json
-        # update format script
         "scripts":{
        "prettier":"prettier --write test \"*.js\" --check"
         },
@@ -84,11 +83,11 @@
 
 - 4.1 🚅 run this in your terminal
 
-  - ```ps
-      npm i --save-dev eslint @typescript-eslint/parser typescript \
-      eslint-config-prettier eslint-plugin-import eslint-plugin-node \
-      eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y \
-      eslint-plugin-standard prettier
+    - ```ps
+          npm i --save-dev eslint @typescript-eslint/parser typescript \
+          eslint-config-prettier eslint-plugin-import eslint-plugin-node \
+          eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y \
+          eslint-plugin-standard prettier
       ```
 
 ## 5 🚀 Create eslint file be sure `eslint installed`
@@ -111,33 +110,33 @@
   - run this in your terminal
 
     - ```shell
-      echo " module.exports = {
-          env: {
-            browser: true,
-            es2021: true,
-          },
-          extends: ['airbnb-base', 'prettier'],
-          plugins: ['prettier'],
-          overrides: [
-            {
-              env: {
-                node: true,
-              },
-              files: ['.eslintrc.{js,cjs}'],
-              parserOptions: {
-                sourceType: 'script',
-              },
+        echo " module.exports = {
+            env: {
+              browser: true,
+              es2021: true,
             },
-          ],
-          parserOptions: {
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-          },
-          rules: {
-            'prettier/prettier': ['error'],
-          },
-        }
-        " > .eslintrc.cjs
+            extends: ['airbnb-base', 'prettier'],
+            plugins: ['prettier'],
+            overrides: [
+              {
+                env: {
+                  node: true,
+                },
+                files: ['.eslintrc.{js,cjs}'],
+                parserOptions: {
+                  sourceType: 'script',
+                },
+              },
+            ],
+            parserOptions: {
+              ecmaVersion: 'latest',
+              sourceType: 'module',
+            },
+            rules: {
+              'prettier/prettier': ['error'],
+            },
+          }
+          " > .eslintrc.cjs
        ```
 
 ## 6 🔥Fixer automatically
@@ -145,10 +144,10 @@
   - 6.1 ⚡ add this in your package.json be sure you describe the folder of your project and replaced it with **test**
     
     - ```json
-              "lint": "eslint . --ext .js",
-              "lint:fix": "npm run lint -- --fix",
-              "prettier:fix": "npm run prettier -- --write",
-              "format": "npm run prettier:fix && npm run lint:fix"
+        "lint": "eslint . --ext .js",
+        "lint:fix": "npm run lint -- --fix",
+        "prettier:fix": "npm run prettier -- --write",
+        "format": "npm run prettier:fix && npm run lint:fix"
       ```
 ## 7 ✔ Let's Run this magic
   - 7.1 run this in your terminal
@@ -157,19 +156,19 @@
       ```
  - 7.2 output
     - ```bash
-      > test@1.0.0 format
-      > npm run prettier:fix && npm run lint:fix
-      
-      
-      > test@1.0.0 prettier:fix
-      > npm run prettier -- --write
-      
-      
-      > test@1.0.0 prettier
-      > prettier --write test "*.js" --check --write
-      
-      Checking formatting...
-      All matched files use Prettier code style!
-      ```
+        > test@1.0.0 format
+        > npm run prettier:fix && npm run lint:fix
+        
+        
+        > test@1.0.0 prettier:fix
+        > npm run prettier -- --write
+        
+        
+        > test@1.0.0 prettier
+        > prettier --write test "*.js" --check --write
+        
+        Checking formatting...
+        All matched files use Prettier code style!
+        ```
 
   
