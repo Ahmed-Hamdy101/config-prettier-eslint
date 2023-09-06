@@ -146,6 +146,7 @@
     - ```json
         "lint": "eslint . --ext .js",
         "lint:fix": "npm run lint -- --fix",
+        "prettier":"prettier --write index.js --check",
         "prettier:fix": "npm run prettier -- --write",
         "format": "npm run prettier:fix && npm run lint:fix"
       ```
