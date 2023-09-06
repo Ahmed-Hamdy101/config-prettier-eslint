@@ -84,7 +84,7 @@
 - 4.1 🚅 run this in your terminal
 
     - ```ps
-          npm i --save-dev eslint @typescript-eslint/parser typescript eslint-config-prettier eslint-plugin-import eslint-plugin-node  eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y  eslint-plugin-standard prettier
+          npm i --save-dev eslint @typescript-eslint/parser typescript eslint-config-prettier eslint-plugin-import eslint-plugin-node  eslint-plugin-promise eslint-plugin-react eslint-plugin-jsx-a11y  eslint-plugin-standard prettier eslint-config-airbnb-base
       ```
 
 ## 5 🚀 Create eslint file be sure `eslint installed`
