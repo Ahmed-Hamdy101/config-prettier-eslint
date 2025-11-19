@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESLint & Prettier - Step by Step Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .code-block {
+            background: #1e293b;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        
+        .emoji-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Hero Section -->
+    <div class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="stars absolute w-1 h-1 bg-white rounded-full opacity-70"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div id="hero-logo" class="mb-8 opacity-0">
+                <div class="inline-flex items-center justify-center space-x-4">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 3L5 7L9 11" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 13L19 17L15 21" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 12H21" stroke="#764ba2" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <h1 id="hero-title" class="text-6xl md:text-7xl font-bold mb-6 text-white opacity-0">
+                ESLint & Prettier
+            </h1>
+            <p id="hero-subtitle" class="text-2xl md:text-3xl text-white opacity-80 mb-8 opacity-0">
+                Step by Step Configuration Guide
+            </p>
+            <button id="scroll-btn" class="glass px-8 py-4 rounded-full text-white font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 opacity-0">
+                Let's Get Started
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        
+        <!-- Step 1: Node.js Installation -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">1</div>
+                <h2 class="text-4xl font-bold">Install Node.js</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Windows</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Visit <a href="https://nodejs.org/en" class="text-blue-400 hover:underline">nodejs.org</a></li>
+                        <li>Download LTS Version (Long Term Support)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Mac or Linux</h3>
+                    <pre class="code-block p-4 text-green-400"><code># Mac (Homebrew)
+brew update && brew upgrade node
+
+# Linux
+sudo apt-get update && upgrade node</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Initialize NPM -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">2</div>
+                <h2 class="text-4xl font-bold">Initialize NPM Package</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <p class="text-gray-300 text-lg">Create your project folder and initialize npm:</p>
+                <pre class="code-block p-4 text-green-400"><code>npm init --yes
+# or with yarn
+yarn init --yes</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 3: Prettier -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">3</div>
+                <h2 class="text-4xl font-bold">Prettier Configuration</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Install Prettier</h3>
+                    <pre class="code-block p-4 text-green-400"><code>yarn add prettier
+# or with npm
+npm i prettier</code></pre>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Create .prettierrc</h3>
+                    <pre class="code-block p-4 text-green-400"><code># Linux/Mac
+touch .prettierrc
+
+# Windows (CMD)
+echo "" > .prettierrc</code></pre>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Configuration</h3>
+                    <pre class="code-block p-4 text-yellow-400"><code>{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true
+}</code></pre>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Update package.json scripts</h3>
+                    <pre class="code-block p-4 text-yellow-400"><code>"scripts": {
+  "prettier": "prettier --write test \"*.js\" --check"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: ESLint Installation -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">4</div>
+                <h2 class="text-4xl font-bold">Install ESLint with Prettier</h2>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-purple-400">Install Dependencies</h3>
+                <pre class="code-block p-4 text-green-400 text-sm"><code>npm i --save-dev eslint @typescript-eslint/parser typescript \
+  eslint-config-prettier \
+  eslint-plugin-import \
+  eslint-plugin-node \
+  eslint-plugin-promise \
+  eslint-plugin-react \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-standard prettier \
+  eslint-config-airbnb-base</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 5: Create ESLint File -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">5</div>
+                <h2 class="text-4xl font-bold">Create ESLint Configuration</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Automatic (Recommended)</h3>
+                    <pre class="code-block p-4 text-green-400"><code>npx eslint init
+# or if installed globally
+eslint --init</code></pre>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Manual Configuration</h3>
+                    <p class="text-gray-300 mb-4">Create <code class="bg-gray-900 px-2 py-1 rounded">.eslintrc.cjs</code> with this configuration:</p>
+                    <pre class="code-block p-4 text-yellow-400 text-sm overflow-x-auto"><code>module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['airbnb-base', 'prettier'],
+  plugins: ['prettier'],
+  overrides: [
+    {
+      env: { node: true },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: { sourceType: 'script' },
+    },
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    'prettier/prettier': ['error'],
+  },
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 6: Auto-Fixer -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">6</div>
+                <h2 class="text-4xl font-bold">Automatic Fixer Scripts</h2>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-purple-400">Add to package.json scripts</h3>
+                <pre class="code-block p-4 text-yellow-400"><code>"scripts": {
+  "lint": "eslint . --ext .js",
+  "lint:fix": "npm run lint -- --fix",
+  "prettier": "prettier --write index.js --check",
+  "prettier:fix": "npm run prettier -- --write",
+  "format": "npm run prettier:fix && npm run lint:fix"
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 7: Run -->
+        <div class="step-card glass rounded-2xl p-8 mb-8" data-aos="fade-up" data-aos-delay="600">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl mr-4">7</div>
+                <h2 class="text-4xl font-bold">Run the Magic!</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Execute Format Command</h3>
+                    <pre class="code-block p-4 text-green-400"><code>npm run format</code></pre>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Expected Output</h3>
+                    <pre class="code-block p-4 text-blue-400"><code>> test@1.0.0 format
+> npm run prettier:fix && npm run lint:fix
+
+> test@1.0.0 prettier:fix
+> npm run prettier -- --write
+
+> test@1.0.0 prettier
+> prettier --write test "*.js" --check --write
+
+Checking formatting...
+All matched files use Prettier code style!</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center py-16" data-aos="fade-up" data-aos-delay="700">
+            <div class="glass rounded-2xl p-8 inline-block">
+                <h2 class="text-3xl font-bold mb-4">Ready to Code!</h2>
+                <p class="text-gray-300 text-lg">Your project is now configured with ESLint and Prettier</p>
+                <div class="mt-6 flex gap-4 justify-center flex-wrap">
+                    <span class="bg-purple-600 px-4 py-2 rounded-full">Clean Code</span>
+                    <span class="bg-blue-600 px-4 py-2 rounded-full">Consistent Style</span>
+                    <span class="bg-green-600 px-4 py-2 rounded-full">Error-Free</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        // GSAP Animations
+        gsap.from("#hero-logo", {
+            duration: 1,
+            opacity: 0,
+            scale: 0,
+            rotation: 360,
+            ease: "back.out(1.7)"
+        });
+
+        gsap.to("#hero-title", {
+            duration: 1,
+            opacity: 1,
+            y: -20,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+
+        gsap.to("#hero-subtitle", {
+            duration: 1,
+            opacity: 1,
+            y: -20,
+            delay: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.to("#scroll-btn", {
+            duration: 1,
+            opacity: 1,
+            y: -20,
+            delay: 1.1,
+            ease: "power3.out"
+        });
+
+        // Smooth scroll
+        document.getElementById('scroll-btn').addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate step cards on hover
+        document.querySelectorAll('.step-card').forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                gsap.to(e.currentTarget, {
+                    scale: 1.02,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            card.addEventListener('mouseleave', (e) => {
+                gsap.to(e.currentTarget, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // Create floating particles
+        function createParticles() {
+            const hero = document.querySelector('.gradient-bg');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'absolute w-1 h-1 bg-white rounded-full opacity-70';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                hero.appendChild(particle);
+                
+                gsap.to(particle, {
+                    y: -100,
+                    opacity: 0,
+                    duration: Math.random() * 3 + 2,
+                    repeat: -1,
+                    delay: Math.random() * 2
+                });
+            }
+        }
+        
+        createParticles();
+    </script>
+</body>
+</html>
